@@ -13,10 +13,11 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="mountains.html">Mountains</a></li>
         <li><a class="active" href="parks.html">Parks</a></li>
+        <link rel="stylesheet" href="css/style.css">
       </ul>
     </header>
     <main>
-
+      <div id="over-ride">
       <input type="radio" id="parksByLocationRadio" name="parks">
       <label for="parksByLocationRadio">Parks By Location</label>
 
@@ -36,10 +37,16 @@
         </select>
       </form>
 
+
       <table display="none">
         <thead></thead>
         <tbody id="parksByLocationTable"></tbody>
       </table>
+      <table display="none">
+        <thead></thead>
+        <tbody id="parksByTypeTable"></tbody>
+      </table>
+    </div>
     </main>
     <footer></footer>
 
