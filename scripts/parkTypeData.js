@@ -13,3 +13,15 @@ const parkTypesArray = [
     "Trail",
     "Parkway"
 ]
+
+
+
+// function loadTypeArray(){
+//     for (const parkType of parkTypesArray) {
+//         let option = document.createElement("option");
+//         option.textContent = parkType;
+//         parksByTypeDrop.appendChild(option);
+//     }
+// }
+
+// loadTypeArray();

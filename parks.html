@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mountains.html">Mountains</a></li>
+        <li><a class="active" href="parks.html">Parks</a></li>
+      </ul>
+    </header>
+    <main>
+
+      <input type="radio" id="parksByLocationRadio" name="parks">
+      <label for="parksByLocationRadio">Parks By Location</label>
+
+      <input type="radio" id="parksByTypeRadio" name="parks"> 
+      <label for="parksByTypeRadio">Parks by Type</label> 
+
+      <form action="">
+        <br> <label for="parksByLocationDrop">Search By Location</label>
+        <select name="" id="parksByLocationDrop">
+          <option value="">Select ...</option>
+        </select>
+        <div id="parkByLocationTable"></div>
+
+        <label for="parksByTypeDrop">Search By Type</label>
+        <select name="" id="parksByTypeDrop">
+          <option value="">Select ...</option>
+        </select>
+      </form>
+
+      <table display="none">
+        <thead></thead>
+        <tbody id="parksByLocationTable"></tbody>
+      </table>
+    </main>
+    <footer></footer>
+
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/parks.js"></script>
+  </body>
+</html>
