@@ -1,6 +1,9 @@
 "use strict";
 const mountainDrop = document.querySelector("#mountainDrop");
-const mountainsTable = document.querySelector("#mountainsTable");
+//const mountainsTable = document.querySelector("#mountainsTable");
+const mountainCard = document.querySelector("#mountainCard");
+
+
 
 function loadMountainArray() {
   for (const mountain of mountainsArray) {
@@ -8,6 +11,9 @@ function loadMountainArray() {
     option.textContent = mountain.name;
     mountainDrop.appendChild(option);
   }
+}
+function loadMountainCard(){
+  
 }
 function loadMountianTable() {
     mountainsTable.innerHTML = "";

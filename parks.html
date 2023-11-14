@@ -13,40 +13,69 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="mountains.html">Mountains</a></li>
         <li><a class="active" href="parks.html">Parks</a></li>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css" />
       </ul>
     </header>
     <main>
       <div id="over-ride">
-      <input type="radio" id="parksByLocationRadio" name="parks">
-      <label for="parksByLocationRadio">Parks By Location</label>
+        <input type="radio" id="parksByLocationRadio" name="parks" />
+        <label for="parksByLocationRadio">Parks By Location</label>
 
-      <input type="radio" id="parksByTypeRadio" name="parks"> 
-      <label for="parksByTypeRadio">Parks by Type</label> 
+        <input type="radio" id="parksByTypeRadio" name="parks" />
+        <label for="parksByTypeRadio">Parks by Type</label>
 
-      <form action="">
-        <br> <label for="parksByLocationDrop">Search By Location</label>
-        <select name="" id="parksByLocationDrop">
-          <option value="">Select ...</option>
-        </select>
-        <div id="parkByLocationTable"></div>
+        <input type="radio" id="allParksRadio" name="parks" />
+        <label for="allParksRadio">All Parks</label>
 
-        <label for="parksByTypeDrop">Search By Type</label>
-        <select name="" id="parksByTypeDrop">
-          <option value="">Select ...</option>
-        </select>
-      </form>
+        <form >
+          <br />
+          <label style="display: none;" for="parksByLocationDrop" id="parksByLocationLabel">Search By Location</label>
+          <select style="display: none;" name="" id="parksByLocationDrop">
+            <option value="">Select . . .</option>
+          </select>
+          
 
+          <label style="display: none;" for="parksByTypeDrop" id="parksByTypeLabel">Search By Type</label>
+          <select style="display: none;" name="" id="parksByTypeDrop">
+            <option value="">Select . . .</option>
+          </select>
+        </form>
+      </div>
 
-      <table display="none">
-        <thead></thead>
-        <tbody id="parksByLocationTable"></tbody>
+      <table style="display: none" id="parksByLocationTableHead">
+        <thead>
+          <tr>
+            <th>Location Id</th>
+            <th>Location Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZipCode</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+          </tr>
+        </thead>
+        <tbody style="display: none;"  id="parksByLocationTable"></tbody>
       </table>
-      <table display="none">
-        <thead></thead>
-        <tbody id="parksByTypeTable"></tbody>
+      <table style="display: none" id="parksByTypeTableHead">
+        <thead>
+          <tr>
+            <th>Location Id</th>
+            <th>Location Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZipCode</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+          </tr>
+        </thead>
+        <tbody style="display: none;" id="parksByTypeTable"></tbody>
       </table>
-    </div>
     </main>
     <footer></footer>
 
