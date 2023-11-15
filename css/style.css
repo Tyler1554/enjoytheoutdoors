@@ -8,6 +8,8 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 li {
@@ -42,5 +44,15 @@ select {
 }
 
 #over-ride{
+  margin-left: 25rem;
+}
+.intro{
+  margin-left: 23rem;
+}
+.intro2{
+  margin-left:32rem;
+}
+
+.mountaincss{
   margin-left: 25rem;
 }

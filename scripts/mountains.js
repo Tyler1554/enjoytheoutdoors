@@ -1,7 +1,9 @@
 "use strict";
 const mountainDrop = document.querySelector("#mountainDrop");
-//const mountainsTable = document.querySelector("#mountainsTable");
-const mountainCard = document.querySelector("#mountainCard");
+const mountainsTable = document.querySelector("#mountainsTable");
+// const mountainCard = document.querySelector("#mountainCard");
+const imagesDiv = document.querySelector("#imagesDiv");
+
 
 
 
@@ -17,13 +19,15 @@ function loadMountainCard(){
 }
 function loadMountianTable() {
     mountainsTable.innerHTML = "";
+    imagesDiv.innerHTML = "";
   const id = mountainDrop.value;
   if (id) {
     mountainsTable.style.display = "block";
+    imagesDiv.style.display = "block";
   } else {
     mountainsTable.style.display = "none";
-  }
 
+  }
   for (const mountain of mountainsArray) {
     if (mountain.name == id) {
       let row = mountainsTable.insertRow(-1);
@@ -35,6 +39,15 @@ function loadMountianTable() {
       cell3.innerText = mountain.effort; 
       let cell4 = row.insertCell(3);
       cell4.innerText = mountain.desc;
+      
+      let image = document.createElement("img");
+
+      image.src = `images/${mountain.img}`;
+
+      image.alt = mountain.name;
+
+      imagesDiv.appendChild(image);
+
     }
   }
 }

@@ -43,6 +43,7 @@ function showAllParks(){
         parksByLocationTableHead.style.display = "block";
         parksByLocationTable.style.display= "block";
       } else {
+        
         parksByLocationTableHead.style.display = "none";
       }
       let row = parksByLocationTable.insertRow(-1);
