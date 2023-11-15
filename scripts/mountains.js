@@ -24,12 +24,13 @@ function loadMountianTable() {
   const id = mountainDrop.value;
   if (id) {
     mountainsTable.style.display = "block";
-    imagesDiv.style.display = "block";
+    // imagesDiv.style.display = "block";
     mountainsTableHead.style.display= "block";
+    document.body.style.backgroundImage = `url('images/${mountainsArray.find(mountain => mountain.name === id).img}')`;
+   
   } else {
     mountainsTable.style.display = "none";
-    
-
+    document.body.style.backgroundImage = "none";
   }
   for (const mountain of mountainsArray) {
     if (mountain.name == id) {
@@ -43,13 +44,13 @@ function loadMountianTable() {
       let cell4 = row.insertCell(3);
       cell4.innerText = mountain.desc;
       
-      let image = document.createElement("img");
+      // let image = document.createElement("img");
 
-      image.src = `images/${mountain.img}`;
+      // image.src = `images/${mountain.img}`;
 
-      image.alt = mountain.name;
+      // image.alt = mountain.name;
 
-      imagesDiv.appendChild(image);
+      // imagesDiv.appendChild(image);
 
     }
   }

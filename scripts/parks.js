@@ -42,6 +42,12 @@ function showAllParks(){
       if (allParksRadio.checked) {
         parksByLocationTableHead.style.display = "block";
         parksByLocationTable.style.display= "block";
+        parksByLocationDrop.style.display= "none";
+        parksByTypeDrop.style.display= "none";
+        parksByLocationLabel.style.display= "none";
+        parksByTypeLabel.style.display= "none";
+        
+
       } else {
         
         parksByLocationTableHead.style.display = "none";
