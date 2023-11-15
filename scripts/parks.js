@@ -120,6 +120,13 @@ function loadParkTable() {
       cell9.innerText = nationalPark.Latitude;
       let cell10 = row.insertCell(9);
       cell10.innerText = nationalPark.Longitude;
+      if (nationalPark.Visit){
+        let link = document.createElement("a");
+        let cell11= row.insertCell(10);
+        link.href = nationalPark.Visit;
+        link.innerText = nationalPark.LocationName;
+        cell11.appendChild(link);
+      }
     }
   }
 }
@@ -148,6 +155,7 @@ function loadParkTypeTable() {
     parksByTypeTableHead.style.display = "none";
   }
   for (const nationalPark of parkFilter) {
+   
     let row = parksByTypeTable.insertRow(-1);
     let cell1 = row.insertCell(0);
     cell1.innerText = nationalPark.LocationID;
@@ -169,6 +177,13 @@ function loadParkTypeTable() {
     cell9.innerText = nationalPark.Latitude;
     let cell10 = row.insertCell(9);
     cell10.innerText = nationalPark.Longitude;
+    if (nationalPark.Visit){
+      let link = document.createElement("a");
+      let cell11= row.insertCell(10);
+      link.href = nationalPark.Visit;
+      link.innerText = nationalPark.LocationName;
+      cell11.appendChild(link);
+    }
   }
 }
 parksByTypeDrop.onchange = loadParkTypeTable;

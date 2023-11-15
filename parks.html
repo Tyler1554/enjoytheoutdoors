@@ -17,20 +17,19 @@
       </ul>
     </header>
     <main>
-     
-        <h1 class="intro">Get ready to dive into adventure!</h1>
-        <h5 class="intro2">select an option here</h5>
-     
-      <div id="over-ride">
-        <input type="radio" id="parksByLocationRadio" name="parks" />
-        <label for="parksByLocationRadio">Parks By Location</label>
+      <h1 class="intro">Get ready to dive into adventure!</h1>
+      <h5 class="intro2">select an option here</h5>
 
-        <input type="radio" id="parksByTypeRadio" name="parks" />
-        <label for="parksByTypeRadio">Parks by Type</label>
+      <input type="radio" id="parksByLocationRadio" name="parks" />
+      <label for="parksByLocationRadio">Parks By Location</label>
 
-        <input type="radio" id="allParksRadio" name="parks" />
-        <label for="allParksRadio">All Parks</label>
+      <input type="radio" id="parksByTypeRadio" name="parks" />
+      <label for="parksByTypeRadio">Parks by Type</label>
 
+      <input type="radio" id="allParksRadio" name="parks" />
+      <label for="allParksRadio">All Parks</label>
+
+      <div class="select-style">
         <form>
           <br />
           <label style="display: none" for="parksByLocationDrop" id="parksByLocationLabel">Search By Location</label>
@@ -44,41 +43,45 @@
           </select>
         </form>
       </div>
+      <article>
+        <table style="display: none" id="parksByLocationTableHead">
+          <thead>
+            <tr>
+              <th>Location Id</th>
+              <th>Location Name</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>ZipCode</th>
+              <th>Phone</th>
+              <th>Fax</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody style="display: none" id="parksByLocationTable"></tbody>
+        </table>
 
-      <table style="display: none" id="parksByLocationTableHead">
-        <thead>
-          <tr>
-            <th>Location Id</th>
-            <th>Location Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>ZipCode</th>
-            <th>Phone</th>
-            <th>Fax</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-          </tr>
-        </thead>
-        <tbody style="display: none" id="parksByLocationTable"></tbody>
-      </table>
-      <table style="display: none" id="parksByTypeTableHead">
-        <thead>
-          <tr>
-            <th>Location Id</th>
-            <th>Location Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>ZipCode</th>
-            <th>Phone</th>
-            <th>Fax</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-          </tr>
-        </thead>
-        <tbody style="display: none" id="parksByTypeTable"></tbody>
-      </table>
+        <table style="display: none" id="parksByTypeTableHead">
+          <thead>
+            <tr>
+              <th>Location Id</th>
+              <th>Location Name</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>ZipCode</th>
+              <th>Phone</th>
+              <th>Fax</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody style="display: none" id="parksByTypeTable"></tbody>
+        </table>
+      </article>
     </main>
     <footer></footer>
 

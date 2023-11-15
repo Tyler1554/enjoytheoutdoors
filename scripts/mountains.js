@@ -3,6 +3,7 @@ const mountainDrop = document.querySelector("#mountainDrop");
 const mountainsTable = document.querySelector("#mountainsTable");
 // const mountainCard = document.querySelector("#mountainCard");
 const imagesDiv = document.querySelector("#imagesDiv");
+const mountainsTableHead = document.querySelector("#mountainsTableHead");
 
 
 
@@ -24,8 +25,10 @@ function loadMountianTable() {
   if (id) {
     mountainsTable.style.display = "block";
     imagesDiv.style.display = "block";
+    mountainsTableHead.style.display= "block";
   } else {
     mountainsTable.style.display = "none";
+    
 
   }
   for (const mountain of mountainsArray) {

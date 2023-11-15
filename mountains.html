@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -16,27 +16,36 @@
       </ul>
     </header>
     <main>
-      <form >
-        <div class="mountaincss">
-        <label for="mountainDrop">Pick a Mountain!</label>
-        <select name="" id="mountainDrop">
-          <option value="">Select ...</option>
-        </select>
-        
-        <!-- <div class="card" id="mountainCard">
+      <form>
+        <div class="select-style">
+          <label for="mountainDrop">
+          </label>
+          <select name="" id="mountainDrop">
+            <option value="">Pick a Mountain!</option>
+          </select>
+
+          <!-- <div class="card" id="mountainCard">
           <img src="" alt="" id="mountainImg">
           <div class="container" id="mountainContainer"> -->
-            <h1></h1>
+          <!-- <h1></h1>
             <p></p>
           </div>
+        </div> -->
         </div>
-      </div>
-
-        <table display="none">
-          <thead></thead>
-          <tbody id="mountainsTable"></tbody>
-        </table>
-        <div id="imagesDiv" style="display: none"></div>
+        <div class="container">         
+            <table >
+              <thead id="mountainsTableHead" style="display: none">
+                <tr>
+                  <th>Mountain Name</th>
+                  <th>Elevation</th>
+                  <th>Difficulty</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="mountainsTable"></tbody>
+            </table>
+            <div id="imagesDiv"></div>
+        </div>
       </form>
     </main>
     <footer></footer>

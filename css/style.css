@@ -32,8 +32,12 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 
-select {
-    max-width: 30rem;
+.select-style {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
 }
 
@@ -43,16 +47,22 @@ select {
 
 }
 
-#over-ride{
-  margin-left: 25rem;
-}
 .intro{
-  margin-left: 23rem;
+  display: flex;
+  justify-content: center;
 }
 .intro2{
-  margin-left:32rem;
+  display: flex;
+  justify-content: center;
 }
 
-.mountaincss{
-  margin-left: 25rem;
+
+body{
+  margin:0;
+  text-align:center;
+
+}
+
+#mountainDrop{
+  max-width: 25%;
 }
