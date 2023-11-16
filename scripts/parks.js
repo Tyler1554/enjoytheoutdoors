@@ -10,78 +10,68 @@ const parksByTypeTableHead = document.querySelector("#parksByTypeTableHead");
 const parksByLocationLabel = document.querySelector("#parksByLocationLabel");
 const parksByTypeLabel = document.querySelector("#parksByTypeLabel");
 
-function toggleParkByLocationDrop (){
-  if (parksByLocationRadio.checked){
-    parksByLocationLabel.style.display="block";
-    parksByLocationDrop.style.display="block";
-    parksByTypeLabel.style.display="none";
-    parksByTypeDrop.style.display="none";
-    parksByTypeTable.style.display="none";
-    parksByTypeTableHead.style.display="none";
+function toggleParkByLocationDrop() {
+  if (parksByLocationRadio.checked) {
+    parksByLocationLabel.style.display = "block";
+    parksByLocationDrop.style.display = "block";
+    parksByTypeLabel.style.display = "none";
+    parksByTypeDrop.style.display = "none";
+    parksByTypeTable.style.display = "none";
+    parksByTypeTableHead.style.display = "none";
   }
-  
 }
-parksByLocationRadio.onclick=toggleParkByLocationDrop;
+parksByLocationRadio.onclick = toggleParkByLocationDrop;
 
-function toggleParkByTypeDrop (){
-  if (parksByTypeRadio.checked){
-    parksByTypeLabel.style.display="block";
-    parksByTypeDrop.style.display="block";
-    parksByLocationLabel.style.display="none";
-    parksByLocationDrop.style.display="none";
-    parksByLocationTable.style.display="none";
-    parksByLocationTableHead.style.display="none";
-    
+function toggleParkByTypeDrop() {
+  if (parksByTypeRadio.checked) {
+    parksByTypeLabel.style.display = "block";
+    parksByTypeDrop.style.display = "block";
+    parksByLocationLabel.style.display = "none";
+    parksByLocationDrop.style.display = "none";
+    parksByLocationTable.style.display = "none";
+    parksByLocationTableHead.style.display = "none";
   }
-  
 }
-parksByTypeRadio.onclick=toggleParkByTypeDrop;
+parksByTypeRadio.onclick = toggleParkByTypeDrop;
 
-function showAllParks(){
+function showAllParks() {
+  parksByLocationTable.innerHTML = "";
   for (const nationalPark of nationalParksArray) {
-      if (allParksRadio.checked) {
-        parksByLocationTableHead.style.display = "block";
-        parksByLocationTable.style.display= "block";
-        parksByLocationDrop.style.display= "none";
-        parksByTypeDrop.style.display= "none";
-        parksByLocationLabel.style.display= "none";
-        parksByTypeLabel.style.display= "none";
-        
-
-      } else {
-        
-        parksByLocationTableHead.style.display = "none";
-      }
-      let row = parksByLocationTable.insertRow(-1);
-      let cell1 = row.insertCell(0);
-      cell1.innerText = nationalPark.LocationID;
-      let cell2 = row.insertCell(1);
-      cell2.innerText = nationalPark.LocationName;
-      let cell3 = row.insertCell(2);
-      cell3.innerText = nationalPark.Address;
-      let cell4 = row.insertCell(3);
-      cell4.innerText = nationalPark.City;
-      let cell5 = row.insertCell(4);
-      cell5.innerText = nationalPark.State;
-      let cell6 = row.insertCell(5);
-      cell6.innerText = nationalPark.ZipCode;
-      let cell7 = row.insertCell(6);
-      cell7.innerText = nationalPark.Phone;
-      let cell8 = row.insertCell(7);
-      cell8.innerText = nationalPark.Fax;
-      let cell9 = row.insertCell(8);
-      cell9.innerText = nationalPark.Latitude;
-      let cell10 = row.insertCell(9);
-      cell10.innerText = nationalPark.Longitude;
+    if (allParksRadio.checked) {
+      parksByLocationTableHead.style.display = "block";
+      parksByLocationTable.style.display = "block";
+      parksByLocationDrop.style.display = "none";
+      parksByTypeDrop.style.display = "none";
+      parksByLocationLabel.style.display = "none";
+      parksByTypeLabel.style.display = "none";
+    } else {
+      parksByLocationTableHead.style.display = "none";
     }
-    }
-    
-  
+    let row = parksByLocationTable.insertRow(-1);
+    let cell1 = row.insertCell(0);
+    cell1.innerText = nationalPark.LocationID;
+    let cell2 = row.insertCell(1);
+    cell2.innerText = nationalPark.LocationName;
+    let cell3 = row.insertCell(2);
+    cell3.innerText = nationalPark.Address;
+    let cell4 = row.insertCell(3);
+    cell4.innerText = nationalPark.City;
+    let cell5 = row.insertCell(4);
+    cell5.innerText = nationalPark.State;
+    let cell6 = row.insertCell(5);
+    cell6.innerText = nationalPark.ZipCode;
+    let cell7 = row.insertCell(6);
+    cell7.innerText = nationalPark.Phone;
+    let cell8 = row.insertCell(7);
+    cell8.innerText = nationalPark.Fax;
+    let cell9 = row.insertCell(8);
+    cell9.innerText = nationalPark.Latitude;
+    let cell10 = row.insertCell(9);
+    cell10.innerText = nationalPark.Longitude;
+  }
+}
 
-allParksRadio.onchange=showAllParks;
-
-
-
+allParksRadio.onchange = showAllParks;
 
 function loadLocationArray() {
   for (const location of locationsArray) {
@@ -98,7 +88,7 @@ function loadParkTable() {
 
   if (id) {
     parksByLocationTableHead.style.display = "block";
-    parksByLocationTable.style.display= "block";
+    parksByLocationTable.style.display = "block";
   } else {
     parksByLocationTableHead.style.display = "none";
   }
@@ -126,16 +116,18 @@ function loadParkTable() {
       cell9.innerText = nationalPark.Latitude;
       let cell10 = row.insertCell(9);
       cell10.innerText = nationalPark.Longitude;
-      if (nationalPark.Visit){
+      if (nationalPark.Visit) {
         let link = document.createElement("a");
-        let cell11= row.insertCell(10);
+        let cell11 = row.insertCell(10);
+        link.innerText = "Visit Website";
+        link.target = "_blank";
         link.href = nationalPark.Visit;
-        link.innerText = nationalPark.LocationName;
         cell11.appendChild(link);
+        
       }
-    }
   }
 }
+  }
 
 parksByLocationDrop.onchange = loadParkTable;
 loadLocationArray();
@@ -156,12 +148,11 @@ function loadParkTypeTable() {
 
   if (type) {
     parksByTypeTableHead.style.display = "block";
-    parksByTypeTable.style.display= "block";
+    parksByTypeTable.style.display = "block";
   } else {
     parksByTypeTableHead.style.display = "none";
   }
   for (const nationalPark of parkFilter) {
-   
     let row = parksByTypeTable.insertRow(-1);
     let cell1 = row.insertCell(0);
     cell1.innerText = nationalPark.LocationID;
@@ -183,9 +174,9 @@ function loadParkTypeTable() {
     cell9.innerText = nationalPark.Latitude;
     let cell10 = row.insertCell(9);
     cell10.innerText = nationalPark.Longitude;
-    if (nationalPark.Visit){
+    if (nationalPark.Visit) {
       let link = document.createElement("a");
-      let cell11= row.insertCell(10);
+      let cell11 = row.insertCell(10);
       link.href = nationalPark.Visit;
       link.innerText = nationalPark.LocationName;
       cell11.appendChild(link);

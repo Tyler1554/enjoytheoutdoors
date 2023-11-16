@@ -5,9 +5,6 @@ const mountainsTable = document.querySelector("#mountainsTable");
 const imagesDiv = document.querySelector("#imagesDiv");
 const mountainsTableHead = document.querySelector("#mountainsTableHead");
 
-
-
-
 function loadMountainArray() {
   for (const mountain of mountainsArray) {
     let option = document.createElement("option");
@@ -15,20 +12,19 @@ function loadMountainArray() {
     mountainDrop.appendChild(option);
   }
 }
-function loadMountainCard(){
-  
-}
+function loadMountainCard() {}
 function loadMountianTable() {
-    mountainsTable.innerHTML = "";
-    imagesDiv.innerHTML = "";
+  mountainsTable.innerHTML = "";
+  imagesDiv.innerHTML = "";
   const id = mountainDrop.value;
   if (id) {
     mountainsTable.style.display = "block";
-    // imagesDiv.style.display = "block";
-    mountainsTableHead.style.display= "block";
-    document.body.style.backgroundImage = `url('images/${mountainsArray.find(mountain => mountain.name === id).img}')`;
-   
+    mountainsTableHead.style.display = "block";
+    document.body.style.backgroundImage = `url('images/${
+      mountainsArray.find((mountain) => mountain.name === id).img
+    }')`;
   } else {
+    mountainsTableHead.style.display = "none";
     mountainsTable.style.display = "none";
     document.body.style.backgroundImage = "none";
   }
@@ -40,25 +36,21 @@ function loadMountianTable() {
       let cell2 = row.insertCell(1);
       cell2.innerText = mountain.elevation;
       let cell3 = row.insertCell(2);
-      cell3.innerText = mountain.effort; 
+      cell3.innerText = mountain.effort;
       let cell4 = row.insertCell(3);
       cell4.innerText = mountain.desc;
-      
-      // let image = document.createElement("img");
-
-      // image.src = `images/${mountain.img}`;
-
-      // image.alt = mountain.name;
-
-      // imagesDiv.appendChild(image);
-
     }
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  mountainDrop.addEventListener("change", function () {
+    let titles = document.querySelectorAll("h1");
+    titles.forEach((title) => {
+      title.style.display = mountainDrop.value ? "none" : "block";
+    });
+  });
+});
+
 mountainDrop.onchange = loadMountianTable;
 loadMountainArray();
-
-
-
-
