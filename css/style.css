@@ -8,7 +8,8 @@ ul {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  
 }
 
 li {
@@ -19,7 +20,8 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 50px;
+  margin-right: 30px;
   text-decoration: none;
 }
 
@@ -80,7 +82,7 @@ html{
   background-color: #111;
 }
 .black-bar {
-  background-color: rgba(0, 0, 0, 0.7); /* Black with 70% transparency */
+  background-color: rgba(0, 0, 0, 0.7); 
   /* position: fixed; */
   /* top: 0;
   left: 0; */
@@ -92,12 +94,15 @@ html{
 table, thead, th { 
   display: inline;
   
+  
 
 }
 
 td, th {
   color: whitesmoke;
+ 
 }
+
 
 #mountainsTableHead{
   z-index: 1;
