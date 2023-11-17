@@ -13,31 +13,31 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="mountains.html">Mountains</a></li>
         <li><a class="active" href="parks.html">Parks</a></li>
-        <link rel="stylesheet" href="css/style.css" />
+        
       </ul>
     </header>
     <main>
       <h1 class="intro">Get ready to dive into adventure!</h1>
       <h5 class="intro2">select an option here</h5>
-     
-        <input type="radio" id="parksByLocationRadio" name="parks" />
-        <label for="parksByLocationRadio">Parks By Location</label>
 
-        <input type="radio" id="parksByTypeRadio" name="parks" />
-        <label for="parksByTypeRadio">Parks by Type</label>
+      <input type="radio" id="parksByLocationRadio" name="parks" />
+      <label for="parksByLocationRadio">Parks By Location</label>
 
-        <input type="radio" id="allParksRadio" name="parks" />
-        <label for="allParksRadio">All Parks</label>
-      
+      <input type="radio" id="parksByTypeRadio" name="parks" />
+      <label for="parksByTypeRadio">Parks by Type</label>
+
+      <input type="radio" id="allParksRadio" name="parks" />
+      <label for="allParksRadio">All Parks</label>
+
       <div class="select-style">
-        <form action="">
+        <form >
           <label style="display: none" for="parksByLocationDrop" id="parksByLocationLabel">Search By Location</label>
-          <select style="display: none" name="" id="parksByLocationDrop">
+          <select style="display: none"  id="parksByLocationDrop">
             <option value="">Select . . .</option>
           </select>
 
           <label style="display: none" for="parksByTypeDrop" id="parksByTypeLabel">Search By Type</label>
-          <select style="display: none" name="" id="parksByTypeDrop">
+          <select style="display: none" id="parksByTypeDrop">
             <option value="">Select . . .</option>
           </select>
         </form>
