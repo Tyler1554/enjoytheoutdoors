@@ -31,7 +31,7 @@ function loadMountianTable() {
     }')`;
   } else {
   
-    // mountainsTable.style.display = "none";
+    mountainsTable.style.display = "none";
     document.body.style.backgroundImage = "none";
   }
   for (const mountain of mountainsArray) {
