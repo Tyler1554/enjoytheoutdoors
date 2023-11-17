@@ -2,7 +2,7 @@
 const mountainDrop = document.querySelector("#mountainDrop");
 const mountainsTable = document.querySelector("#mountainsTable");
 const imagesDiv = document.querySelector("#imagesDiv");
-const mountainsTableHead = document.querySelector("#mountainsTableHead");
+const mountainsTableBody = document.querySelector("#mountainsTableBody");
 const blackBar = document.querySelector(".black-bar");
 
 
@@ -25,14 +25,13 @@ function loadMountianTable() {
   const id = mountainDrop.value;
   if (id) {
     mountainsTable.style.display = "block";
-    mountainsTableHead.style.display = "block";
     blackBar.style.display= "block";
     document.body.style.backgroundImage = `url('images/${
       mountainsArray.find((mountain) => mountain.name === id).img
     }')`;
   } else {
-    mountainsTableHead.style.display = "none";
-    mountainsTable.style.display = "none";
+  
+    // mountainsTable.style.display = "none";
     document.body.style.backgroundImage = "none";
   }
   for (const mountain of mountainsArray) {

@@ -196,9 +196,9 @@ function loadParkTypeTable() {
     cell9.innerText = nationalPark.Latitude;
     let cell10 = row.insertCell(9);
     cell10.innerText = nationalPark.Longitude;
+    let cell11 = row.insertCell(10);
     if (nationalPark.Visit) {
       let link = document.createElement("a");
-      let cell11 = row.insertCell(10);
       link.href = nationalPark.Visit;
       link.innerText = "Visit Website!";
       link.target= "_blank"
