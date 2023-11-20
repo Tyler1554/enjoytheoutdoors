@@ -20,7 +20,7 @@ function loadMountainArray() {
 
 
 function loadMountianTable() {
-  mountainsTable.innerHTML = "";
+  mountainsTableBody.innerHTML = "";
   imagesDiv.innerHTML = "";
   const id = mountainDrop.value;
   if (id) {
@@ -36,7 +36,7 @@ function loadMountianTable() {
   }
   for (const mountain of mountainsArray) {
     if (mountain.name == id) {
-      let row = mountainsTable.insertRow(-1);
+      let row = mountainsTableBody.insertRow(-1);
       let cell1 = row.insertCell(0);
       cell1.innerText = mountain.name;
       let cell2 = row.insertCell(1);
